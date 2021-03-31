@@ -2,12 +2,27 @@
 	.mobile-header-mini #Top_bar a.action_button {
 		display: none;
 	}
+	.image_blue {
+		position: relative;
+		top: 150px;
+		left: 15px;
+		padding-bottom: 20px;
+	}
 }
 @media only screen and (min-width: 1921px) {
 	.mcb-section.bg-cover-ultrawide, .mcb-wrap.bg-cover-ultrawide, .column_attr.bg-cover-ultrawide {
 		background-size: cover;
 	}
 }
+
+@media screen and (min-width: 1000px) {
+	.image-blue {
+		position: relative; 
+		left: 260px;
+		bottom: 50px;
+	}
+}
+
 .alignright {
 	float: right;
 	margin: 15px 0 15px 15px;
