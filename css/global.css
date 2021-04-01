@@ -2329,6 +2329,7 @@ blockquote:after {
 	position: absolute;
 	left: 0;
 	width: 100%;
+	border-radius: 5px;
 	height: 100%;
 	z-index: 2
 }
