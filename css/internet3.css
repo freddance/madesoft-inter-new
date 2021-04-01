@@ -2699,7 +2699,8 @@ hr.no_line {
 }
 img.scale-with-grid, #Content img {
 	max-width: 100%;
-	height: auto;
+	height: 90px;
+	padding-bottom: 20px;
 }
 .minimalist-header-no #Header {
 	min-height: 0!important;
