@@ -28,6 +28,30 @@
 	<link rel='stylesheet' href='/css/global.css'>
 	<link rel='stylesheet' href='css/structure.css'>
 	<link rel='stylesheet' href='css/internet3.css'>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_WQOFj9stshgB9GP0tSjRi');
+        })();
+    </script>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+				// generate a five digit number for the contact_number variable
+				// this.contact_number.value = Math.random() * 100000 | 0;
+				// these IDs from the previous steps
+				emailjs.sendForm('service_qmatm1o', 'template_b3v8wtl', this)
+					.then(function() {
+						console.log('SUCCESS!');
+					}, function(error) {
+						console.log('FAILED...', error);
+					});
+			});
+		}
+	</script>
 </head>
 
 <body class=" page style-simple button-custom layout-full-width if-disable if-border-hide no-content-padding no-shadows header-classic sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80-1 menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky">
@@ -74,13 +98,14 @@
 				</div>
 			</header>
 		</div>
+
 		<div id="Content">
 			<div class="content_wrapper clearfix">
 				<div class="sections_group">
 					<div class="section mcb-section equal-height-wrap">
 						<div class="container">
 							<div class="row">
-								<div class="col-md-8 two-third valign-top move-up" style="margin-top:--100px">
+								<div class="col-md-8 two-third valign-top move-up" style="margin-top: 100px">
 									<div class="mcb-wrap-inner">
 										<div class="column_attr clearfix bg-cover" style="background-image:url('images/internet3-column-bg1.jpg');background-repeat:no-repeat;background-position:center;padding:160px 10% 120px 15%;border-radius: 61% 39% 44% 56% / 75% 53% 47% 25%;">
 											<h2 style="color:#FFF;">Get in touch with us and upgrade your net.</h2>
@@ -101,6 +126,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="section mcb-section mobile_small_padding" style="padding-top:130px;padding-bottom:90px;background-color:#ffffff">
 						<div class="container">
 							<div class="row">
@@ -153,23 +179,23 @@
 												<h3> fill the form below</h3>
 												<hr class="no_line" style="margin:0 auto 20px">
 												<div id="contactWrapper">
-													<form id="contactform">
+													<form id="contact-form" >
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
 															<input placeholder="Your name" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
 														</div>
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
-															<input placeholder="Your e-mail" type="email" name="email" id="email" size="40" aria-required="true" aria-invalid="false" />
+															<input placeholder="Your e-mail" type="email" name="email"  size="40" aria-required="true" aria-invalid="false" />
 														</div>
 														<div class="column one">
 															<input placeholder="phone number" type="text" name="phone" id="phone" size="40" aria-invalid="false" />
 														</div>
 														<div class="column one mb-4">
-															<input placeholder="address" type="text" name="=address" id="address" size="40" aria-invalid="false" />
+															<input placeholder="address" type="text" name="address" id="address" size="40" aria-invalid="false" />
 														</div>
 														<div class="column one">
-															<input type="button" value="Submit" id="submit" onClick="return check_values();">
+															<input type="submit"  value="Send Message" id="submit">
 														</div>
 													</form>
 												</div>

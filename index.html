@@ -31,6 +31,31 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- Revolution Slider -->
 	<link rel="stylesheet" href="plugins/rs-plugin-6.custom/css/rs6.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_WQOFj9stshgB9GP0tSjRi');
+        })();
+    </script>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+				// generate a five digit number for the contact_number variable
+				// this.contact_number.value = Math.random() * 100000 | 0;
+				// these IDs from the previous steps
+				emailjs.sendForm('service_qmatm1o', 'template_b3v8wtl', this)
+					.then(function() {
+						console.log('SUCCESS!');
+					}, function(error) {
+						console.log('FAILED...', error);
+					});
+			});
+		}
+
+	</script>
 </head>
 
 <body class="home page template-slider style-simple button-custom layout-full-width one-page if-disable if-border-hide no-content-padding no-shadows header-classic sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80-1 menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky ">
@@ -295,18 +320,21 @@
 										  </div>
 									</div>
 								</div>
+
+
 								<div class="col-md-6 mb-4 valign-middle" style="padding:40px 0 0">
 									<div class="mcb-wrap-inner">
 										<div class="row text-center">
 											<div class="col-md-6 mb-4">
 												<div class="photo_box">
 													<div class="image_frame">
-														<a href="https://esopos.com/" target="https://esopos.com/">
-														<div class="image_wrapper">
+														
+														<div class="image_wrapper" data-aos="zoom-in" data-aos-offset="30"
+														data-aos-delay="50">
 															<div class="mask"></div>
 															<img class="scale-with-grid" src="/images/esopos.png">
 														</div>
-														</a>
+														
 													</div>
 													
 												</div>
@@ -314,12 +342,13 @@
 											<div class="col-md-6 mb-4">
 												<div class="photo_box">
 													<div class="image_frame">
-													<a href="https://madesoftautomation.com/" target="https://madesoftautomation.com/">
-														<div class="image_wrapper">
+													
+														<div class="image_wrapper" data-aos="zoom-in" data-aos-offset="30"
+														data-aos-delay="100">
 															<div class="mask"></div>
 															<img class="scale-with-grid" src="/images/madesoftauto.png">
 														</div>
-													</a>
+													
 													</div>
 												
 												</div>
@@ -330,8 +359,9 @@
 											<div class="col-md-6 mb-4">
 												<div class="photo_box">
 													<div class="image_frame">
-														<a href="https://madesoftacademy.com/" target="https://madesoftacademy.com/">
-														<div class="image_wrapper">
+														<a href="#">
+														<div class="image_wrapper" data-aos="zoom-in" data-aos-offset="30"
+														data-aos-delay="150">
 															<div class="mask"></div>
 															<img class="scale-with-grid" src="/images/madesoftacade.png">
 														</div>
@@ -343,7 +373,8 @@
 											<div class="col-md-6 mb-4">
 												<div class="photo_box">
 													<div class="image_frame">
-														<div class="image_wrapper">
+														<div class="image_wrapper" data-aos="zoom-in" data-aos-offset="30"
+														data-aos-delay="200">
 															<div class="mask"></div>
 															<img class="scale-with-grid" src="/images/devcenter.png">
 														</div>
@@ -353,9 +384,10 @@
 											</div>
 											<div class="col-md-6 mb-4">
 												<div class="photo_box">
-													<a href="https://wadas.ng/" target="https://wadas.ng/">
+													<a href="#">
 													<div class="image_frame">
-														<div class="image_wrapper">
+														<div class="image_wrapper" data-aos="zoom-in" data-aos-offset="30"
+														data-aos-delay="250">
 															<div class="mask"></div>
 															<img class="scale-with-grid" src="/images/wadas.png">
 														</div>
@@ -373,6 +405,7 @@
 						</div>
 					</div>
 					
+
 					<div class="section mcb-section mobile_small_padding" style="padding-top:130px;padding-bottom:80px">
 						<div class="container">
 							<div class="row">
@@ -385,6 +418,8 @@
 									<!-- <h2>Care To Join Us</h2> -->
 								</div>
 							</div>
+
+
 							<div class="row">
 								<div class="col-12">
 									<hr class="no_line" style="margin:0 auto 80px">
@@ -396,14 +431,24 @@
 								</div>
 								<div class="col-md-6 mb-4">
 									<div class="column_attr clearfix" style="padding:65px 40px 0px;">
-									<form id="newsletterform">
+									<form id="contact-form">
 									<div class="row">
-									<div class="col-12 mb-4"><input type="text" id="name_news" name="name_news" size="40" aria-required="true" aria-invalid="false" placeholder="Your name" /></div>
-									<div class="col-12 mb-4"><input type="email" id="email_news" name="email_news" size="40" aria-required="true" aria-invalid="false" placeholder="Your email" /></div>
+
 									<div class="col-12 mb-4">
-                                        <textarea placeholder="Message" name="body" id="body" style="width:100%;" rows="10" aria-invalid="false"></textarea>
+										<input type="text" id="name_news" name="user_name" size="40" aria-required="true" aria-invalid="false" placeholder="Your name" />
 									</div>
-									<div class="col-12"><input type="button" value="Send Message" id="submit" onClick="return check_values_news();"></div>
+
+									<div class="col-12 mb-4">
+										<input type="email" id="email_news" name="user_email" size="40" aria-required="true" aria-invalid="false" placeholder="Your email" />
+									</div>
+
+									<div class="col-12 mb-4">
+                                        <textarea placeholder="Message" name="message" style="width:100%;" rows="10" aria-invalid="false"></textarea>
+									</div>
+
+									<div class="col-12">
+										<input  type="submit"  value="Send Message" id="submit">
+									</div>
 									 </div>
 									</form>
 									</div>
