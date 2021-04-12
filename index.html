@@ -43,22 +43,28 @@
 		window.onload = function() {
 			document.getElementById('contact-form').addEventListener('submit', function(event) {
 				event.preventDefault();
-				// generate a five digit number for the contact_number variable
-				// this.contact_number.value = Math.random() * 100000 | 0;
-				// these IDs from the previous steps
+				
 				emailjs.sendForm('service_qmatm1o', 'template_b3v8wtl', this)
 					.then(function() {
-						console.log('SUCCESS!');
+						alert('Sent!');
+						
+						window.location.reload();
 					}, function(error) {
-						console.log('FAILED...', error);
+						console.log(error);
+						alert('An error occurred');
 					});
 			});
+			// let btnClear = document.querySelector('button');
+			// let inputs = document.querySelectorAll('input');
+ 
+			// btnClear.addEventListener('click', () => {
+    		// inputs.forEach(input =>  input.value = '');
+			// });
 		}
-
 	</script>
 </head>
 
-<body class="home page template-slider style-simple button-custom layout-full-width one-page if-disable if-border-hide no-content-padding no-shadows header-classic sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80-1 menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky ">
+	<body class="home page template-slider style-simple button-custom layout-full-width one-page if-disable if-border-hide no-content-padding no-shadows header-classic sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80-1 menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky ">
 	<div id="Wrapper">
 		<div id="Header_wrapper">
 			<header id="Header">
@@ -429,9 +435,13 @@
 								<div class="col-md-6 mb-4">
 									<img class="scale-with-grid" style="margin-top:-130px;" src="/images/internet3-contact-pic1.png" alt="internet3-contact-pic1" width="780" height="810">
 								</div>
+
+
 								<div class="col-md-6 mb-4">
 									<div class="column_attr clearfix" style="padding:65px 40px 0px;">
-									<form id="contact-form">
+
+										
+									<form id="contact-form" action="/">
 									<div class="row">
 
 									<div class="col-12 mb-4">
@@ -447,7 +457,8 @@
 									</div>
 
 									<div class="col-12">
-										<input  type="submit"  value="Send Message" id="submit">
+										<!-- <input  type="submit" href="/" value="Send Message" id="submit"> -->
+										<button id="submit" type="submit">Send Message</button>
 									</div>
 									 </div>
 									</form>
@@ -502,7 +513,7 @@
 	<div id="Side_slide" class="right dark" data-width="250">
 		<div class="close-wrapper">	<a href="#" class="close"><i class="icon-cancel-fine"></i></a>
 		</div>
-		<div class="extras">	<a href="https://1.envato.market/9ZxXY" class="action_button" target="_blank">Buy now</a>
+		<div class="extras">	<a href="/contact.html" class="action_button">Contact Us</a>
 			<div class="extras-wrapper"></div>
 		</div>
 		<div class="menu_wrapper"></div>

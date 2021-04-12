@@ -43,15 +43,35 @@
 				// generate a five digit number for the contact_number variable
 				// this.contact_number.value = Math.random() * 100000 | 0;
 				// these IDs from the previous steps
+				
 				emailjs.sendForm('service_qmatm1o', 'template_b3v8wtl', this)
 					.then(function() {
-						console.log('SUCCESS!');
+						alert('successful!');
+						
+						window.location.reload();
 					}, function(error) {
-						console.log('FAILED...', error);
+						console.log(error);
+						alert('An error occurred');
 					});
 			});
+			
 		}
 	</script>
+
+	<style>
+		body {
+    text-align: center;
+}
+ 
+div {
+    display: inline-block;
+}
+ 
+input, button {
+    display: inline-block;
+    padding: 10px 20px;
+}
+	</style>
 </head>
 
 <body class=" page style-simple button-custom layout-full-width if-disable if-border-hide no-content-padding no-shadows header-classic sticky-header sticky-tb-color ab-hide subheader-both-center menu-line-below-80-1 menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky">
@@ -195,7 +215,7 @@
 															<input placeholder="address" type="text" name="address" id="address" size="40" aria-invalid="false" />
 														</div>
 														<div class="column one">
-															<input type="submit"  value="Send Message" id="submit">
+															<button id="submit" type="submit">Send Message</button>
 														</div>
 													</form>
 												</div>
@@ -210,6 +230,9 @@
 					<div class="section mcb-section" style="background-color:#ffffff">
 						<hr class="no_line" style="margin:0 auto 40px">
 					</div>
+
+
+					
 				</div>
 			</div>
 		</div>
