@@ -56,7 +56,7 @@ body.header-below:not(.template-slider) #Header {
 	padding-top: 0px;
 }
 #Footer .widgets_wrapper {
-	padding: 70px 0;
+	padding: 60px 0;
 }
 body, button, span.date_label, .timeline_items li h3 span, input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], input[type="tel"], input[type="email"], textarea, select, .offer_li .title h3 {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -659,7 +659,7 @@ h6 {
 }
 @media only screen and (max-width: 767px) {
 	#Top_bar a.responsive-menu-toggle {
-		top: 50px;
+		top: 30px;
 	}
 }
 
@@ -2036,7 +2036,7 @@ hr.hr_color, .hr_color hr, .hr_dots span {
 	color: #f9c8a3;
 }
 #Top_bar .responsive-menu-toggle, #Header_creative .creative-menu-toggle, #Header_creative .responsive-menu-toggle {
-	color: #ff8429;
+	color: #ffff;
 	background: transparent;
 }
 #Side_slide {
