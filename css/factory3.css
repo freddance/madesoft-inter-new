@@ -599,17 +599,17 @@ h6 {
 }
 .button-custom .button_theme:hover, .button-custom button:hover, .button-custom input[type="button"]:hover, .button-custom input[type="reset"]:hover, .button-custom input[type="submit"]:hover, .button-custom .woocommerce #respond input#submit:hover, .button-custom .woocommerce a.button:not(.default):hover, .button-custom .woocommerce button.button:hover, .button-custom .woocommerce input.button:hover {
 	color: #561e00;
-	background-color: #3847ce;
+	background-color: #3853A4;
 	border-color: transparent;
 }
 .button-custom .action_button {
 	color: #ffff;
-	background-color: #1127ff;
+	background-color: #3853A4;
 	border-color: transparent;
 }
 .button-custom .action_button:hover {
 	color: #561e00;
-	background-color: #3b4bdd;
+	background-color: #3853A4;
 	border-color: transparent;
 }
 .button-custom .single_add_to_cart_button, .button-custom .woocommerce .button:disabled, .button-custom .woocommerce .button.alt, .button-custom a.remove {
@@ -1900,11 +1900,11 @@ h6, h6 a, h6 a:hover, a.content_link .title {
 	background-color: #ff8429;
 }
 .button-default .button_theme, .button-default button, .button-default input[type="button"], .button-default input[type="reset"], .button-default input[type="submit"], .button-flat .button_theme, .button-flat button, .button-flat input[type="button"], .button-flat input[type="reset"], .button-flat input[type="submit"], .button-round .button_theme, .button-round button, .button-round input[type="button"], .button-round input[type="reset"], .button-round input[type="submit"], .woocommerce #respond input#submit, .woocommerce a.button:not(.default), .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit:hover, .woocommerce a.button:not(.default):hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
-	background-color: #1127ff;
+	background-color: #3853A4;
 }
 
 .btn_one {
-	background-color: #1127ff!important;
+	background-color: #3853A4!important;
 	color: white!important;
 }
 
