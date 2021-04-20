@@ -612,6 +612,10 @@ h6 {
 	background-color: #3853A4;
 	border-color: transparent;
 }
+
+
+
+
 .button-custom .single_add_to_cart_button, .button-custom .woocommerce .button:disabled, .button-custom .woocommerce .button.alt, .button-custom a.remove {
 	line-height: 18px!important;
 	padding: 15px 30px 15px 30px!important;

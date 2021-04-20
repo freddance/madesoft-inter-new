@@ -17,12 +17,26 @@
     transition: opacity 100ms ease-in;
     pointer-events: none;
 }
+.modalDialog1{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+}
 .modalDialog:target {
     opacity:1;
     pointer-events: auto;
 }
 .modalDialog > div {
-    max-width: 800px;
+    max-width: 900px;
     width: 90%;
     position: relative;
     margin: 6% auto;
@@ -31,7 +45,59 @@
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 3px;
-    border-radius: 8px;
+    border-radius: 15px;
+    transition: 2s;
+}
+.modalDialog1 > div {
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    margin: 6% auto;
+    padding: 40px;
+    background-image: url('/images/devnode.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border-radius: 15px;
+    transition: 2s;
+}
+.modalDialog2 > div {
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    margin: 6% auto;
+    padding: 40px;
+    background-image: url('/images/madesoftacademy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border-radius: 15px;
+    transition: 2s;
+}
+.modalDialog3 > div {
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    margin: 6% auto;
+    padding: 40px;
+    background-image: url('/images/madesoftautomation.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border-radius: 15px;
+    transition: 2s;
+}
+.modalDialog4 > div {
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    margin: 6% auto;
+    padding: 40px;
+    background-image: url('/images/stacksend.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border-radius: 15px;
     transition: 2s;
 }
 .close {
