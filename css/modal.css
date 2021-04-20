@@ -132,3 +132,16 @@
     color: white!important;
     border-radius: 50px!important;
 }
+
+
+@media screen and (min-width: 900px) {
+    .modal-ptag {
+        padding-left: 400px; 
+        padding-top: 15px;
+    }
+    
+    .btn_readmore{
+        margin-left: 398px; 
+        margin-top: 10px
+    }
+}
