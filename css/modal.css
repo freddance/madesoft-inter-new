@@ -27,8 +27,11 @@
     position: relative;
     margin: 10% auto;
     padding: 40px;
+    background-image: url('/images/esopos1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 3px;
-    background: #fff;
+    border-radius: 8px;
     transition: 2s;
 }
 .close {
